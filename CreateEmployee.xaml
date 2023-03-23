@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestMaui.CreateEmployee"
+             Title="CreateEmployee">
+    <VerticalStackLayout>
+        <Label 
+            Text="Create Employee"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" FontSize="Large" />
+        <Entry Margin="10" x:Name="FirstName" Placeholder="Enter first name"></Entry>
+        <Entry Margin="10" x:Name="LastName" Placeholder="Enter last name"></Entry>
+        <Entry Margin="10" x:Name="Gender" Placeholder="Enter gender"></Entry>
+        <Entry Margin="10" x:Name="Email" Placeholder="Enter email"></Entry>
+        <Entry Margin="10" x:Name="Address" Placeholder="Enter address"></Entry>
+        <HorizontalStackLayout>
+            <Button x:Name="Back" Text="Go back" Clicked="Back_Clicked"></Button>
+            <Button x:Name="Create" Text="Create" Clicked="Create_Clicked"></Button>
+        </HorizontalStackLayout>
+        <Label x:Name="Message" IsVisible="False"></Label>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestMaui.ListEmployees"
+             Title="ListEmployees">
+    <!--<ContentPage.Content>-->
+    <VerticalStackLayout>
+        <Label Text="Employees" HorizontalOptions="Center" FontSize="Large"></Label>
+        <ListView x:Name="EmployeeListView" ItemsSource="{Binding Employees}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Name}" FontAttributes="Bold"></Label>
+                            <Label Text="{Binding Gender}" FontAttributes="None"></Label>
+                            <Label Text="{Binding Email}" FontAttributes="None"></Label>
+                            <Label Text="{Binding Address}" FontAttributes="None"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="Create" Clicked="Create_Clicked"></Button>
+    </VerticalStackLayout>
+    <!--</ContentPage.Content>-->
+</ContentPage>
